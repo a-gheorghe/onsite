@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>On-Site Construction</title>
+        <link rel="stylesheet" href="../styles.css">
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="#logo"> Logo </a>
+                <a href=../index.html> Home </a>
+                <a href=../about/index.html> About </a>
+                <a href="../projects/index.html"> Project Gallery </a>
+                <a href="../services/index.html"> Services </a>
+                <a href=../contact/index.html class="active-link"> Contact </a>
+            </nav>
+        </header>
+        <main>
+            <div class="page-heading">
+                <span class="text--14 text--bold text--black"> We deliver </span>
+                <span class="text--14 text--bold text--red"> Commercial and Residential </span>
+                <span class="text--14 text--bold text--black"> Construction </span>
+                <div class="text--45 text--bold text--black"> Get in touch. </div>
+            </div>
+            <div class="contact--card-container">
+                <div class="card about--card">
+                    <div class="heading"> Headquarters </div>
+                    <div class="content">
+                        <span>
+                            <p>83 Galaxy Blvd</p>
+                            <p>Toronto, Ontario, Canada</p>
+                        </span>
+                        <span>
+                            <p>Monday to Friday<p>
+                            <p>8:00am to 6:00pm</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="card about--card">
+                    <div class="heading"> Contact Us </div>
+                    <div class="content">
+                    <span>
+                        <p>+1.416.654.6000</p>
+                        <p><a class="text--blue"> info@onsitegc.ca </a></p>
+                    </span>
+                    <span>
+                        <p>Available 24 hours a day</p>
+                        <p>7 days a week</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <div id=map class="map__google"></div>
+            <button class="map__button"> Get Directions </button>
+        </div>
+        </main>
+        <script>
+            // Initialize and add the map
+            function initMap() {
+            // The location of Onsite
+            var onsite = {lat: 43.680880, lng: -79.586150};
+            // The map, centered at Onsite
+            var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 13, center: onsite});
+            // The marker, positioned at Onsite
+            var marker = new google.maps.Marker({position: onsite, map: map});
+            }
+            </script>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=initMap">
+            </script>
+    </body>
+</html>
